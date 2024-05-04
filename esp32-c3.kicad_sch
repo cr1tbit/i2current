@@ -1037,6 +1037,12 @@
 		(uuid "93118b95-9420-442a-abfa-68aa2b2d427e")
 	)
 	(junction
+		(at 105.41 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ddd05b67-d116-4d6f-8e24-dd4dd7b0a6e8")
+	)
+	(junction
 		(at 115.57 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1084,6 +1090,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 107.95) (xy 130.81 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "188d7db7-0cfc-416e-9e77-d02d94e4bcee")
+	)
+	(wire
+		(pts
 			(xy 99.06 85.09) (xy 95.25 85.09)
 		)
 		(stroke
@@ -1094,6 +1110,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 74.93) (xy 107.95 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f37ece2-6ec7-410f-9e07-d301c5910d45")
+	)
+	(wire
+		(pts
 			(xy 109.22 105.41) (xy 107.95 105.41)
 		)
 		(stroke
@@ -1101,6 +1127,16 @@
 			(type default)
 		)
 		(uuid "2372b3a9-88f5-4157-8ca4-1a5f28c70c14")
+	)
+	(wire
+		(pts
+			(xy 130.81 80.01) (xy 144.78 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23e9d7ad-2ab8-4020-9cd4-49c401653233")
 	)
 	(wire
 		(pts
@@ -1314,6 +1350,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 77.47) (xy 105.41 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8988d5d3-96b4-4829-93e7-2795800c6bf1")
+	)
+	(wire
+		(pts
 			(xy 99.06 87.63) (xy 95.25 87.63)
 		)
 		(stroke
@@ -1344,16 +1390,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 80.01) (xy 144.78 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf594029-01cf-46ea-a97f-9a9abd799ded")
-	)
-	(wire
-		(pts
 			(xy 106.68 129.54) (xy 106.68 132.08)
 		)
 		(stroke
@@ -1361,6 +1397,16 @@
 			(type default)
 		)
 		(uuid "c1e0d15c-34bd-446d-962a-22921a6255a0")
+	)
+	(wire
+		(pts
+			(xy 105.41 77.47) (xy 144.78 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8f6a0b7-fbd9-400b-bb93-ed657700f806")
 	)
 	(wire
 		(pts
@@ -1384,16 +1430,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 77.47) (xy 144.78 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1fae52a-270e-44b4-9557-2e762fe94a73")
-	)
-	(wire
-		(pts
 			(xy 107.95 107.95) (xy 130.81 107.95)
 		)
 		(stroke
@@ -1404,7 +1440,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 74.93) (xy 107.95 74.93)
+			(xy 102.87 74.93) (xy 105.41 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1441,17 +1477,6 @@
 			)
 		)
 		(uuid "fbcae2ab-f995-43ab-b52d-b59f40157e5b")
-	)
-	(label "IO9{slash}BOOT_BUT1"
-		(at 142.24 80.01 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "20e5d072-691e-4937-b2a9-519a5aa86e1b")
 	)
 	(label "TARG_TX"
 		(at 35.56 82.55 180)
@@ -1984,7 +2009,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 115.57 127 0)
 			(effects
 				(font
@@ -2119,7 +2144,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical"
+		(property "Footprint" "Critbit_lib:sideclutch"
 			(at 149.86 82.55 0)
 			(effects
 				(font
