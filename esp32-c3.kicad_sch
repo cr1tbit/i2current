@@ -2144,7 +2144,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Critbit_lib:sideclutch"
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical"
 			(at 149.86 82.55 0)
 			(effects
 				(font
