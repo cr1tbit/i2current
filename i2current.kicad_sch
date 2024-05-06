@@ -7275,6 +7275,12 @@
 		(uuid "307b1ac2-ae65-41d5-8c98-3654c156468e")
 	)
 	(junction
+		(at 92.71 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33c2a875-8051-4501-9e05-e050a3b87ec7")
+	)
+	(junction
 		(at 54.61 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7399,12 +7405,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6940824d-73e4-4939-8d00-0c2af9faee37")
-	)
-	(junction
-		(at 110.49 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "71ad6f35-32b4-4c84-b613-0cecb67d99e0")
 	)
 	(junction
 		(at 250.19 33.02)
@@ -7557,6 +7557,12 @@
 		(uuid "aa42045e-cc1a-4213-9611-203244d21824")
 	)
 	(junction
+		(at 92.71 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab12f0bf-3e2b-4cc7-bdbc-9dfcc5a90dcb")
+	)
+	(junction
 		(at 45.72 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7603,6 +7609,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db5e62de-be68-4d7f-91e4-814c26bd24f3")
+	)
+	(junction
+		(at 107.95 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc0982df-7c42-4c86-9a07-ac8611f3d678")
 	)
 	(junction
 		(at 31.75 228.6)
@@ -7818,7 +7830,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 53.34) (xy 110.49 53.34)
+			(xy 106.68 53.34) (xy 107.95 53.34)
 		)
 		(stroke
 			(width 0)
@@ -8350,7 +8362,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 27.94) (xy 93.98 27.94)
+			(xy 88.9 27.94) (xy 92.71 27.94)
 		)
 		(stroke
 			(width 0)
@@ -8367,16 +8379,6 @@
 			(type default)
 		)
 		(uuid "2ba1423b-9976-4334-8225-4bbb82bbfd72")
-	)
-	(wire
-		(pts
-			(xy 78.74 27.94) (xy 81.28 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c20dc33-ce42-49ab-aeae-a542f033983c")
 	)
 	(wire
 		(pts
@@ -8490,7 +8492,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 44.45) (xy 120.65 44.45)
+			(xy 92.71 44.45) (xy 110.49 44.45)
 		)
 		(stroke
 			(width 0)
@@ -8651,6 +8653,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 44.45) (xy 120.65 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45ae0d1c-50a7-4e62-bda9-14e9d48e091f")
+	)
+	(wire
+		(pts
 			(xy 168.91 71.12) (xy 168.91 72.39)
 		)
 		(stroke
@@ -8741,7 +8753,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 35.56) (xy 99.06 35.56)
+			(xy 92.71 35.56) (xy 101.6 35.56)
 		)
 		(stroke
 			(width 0)
@@ -8888,6 +8900,16 @@
 			(type default)
 		)
 		(uuid "5430c057-5f74-4312-b8c5-3c86679449c5")
+	)
+	(wire
+		(pts
+			(xy 92.71 27.94) (xy 96.52 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54a8898a-e7d5-437a-9a1c-2410d23d6314")
 	)
 	(wire
 		(pts
@@ -9982,7 +10004,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 24.13) (xy 110.49 27.94)
+			(xy 107.95 24.13) (xy 107.95 27.94)
 		)
 		(stroke
 			(width 0)
@@ -10213,7 +10235,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 27.94) (xy 110.49 27.94)
+			(xy 106.68 27.94) (xy 107.95 27.94)
 		)
 		(stroke
 			(width 0)
@@ -10414,7 +10436,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 24.13) (xy 119.38 24.13)
+			(xy 107.95 24.13) (xy 119.38 24.13)
 		)
 		(stroke
 			(width 0)
@@ -10526,7 +10548,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 45.72) (xy 99.06 45.72)
+			(xy 92.71 45.72) (xy 101.6 45.72)
 		)
 		(stroke
 			(width 0)
@@ -10606,7 +10628,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 53.34) (xy 93.98 53.34)
+			(xy 88.9 53.34) (xy 92.71 53.34)
 		)
 		(stroke
 			(width 0)
@@ -10706,7 +10728,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 35.56) (xy 92.71 35.56)
+			(xy 83.82 35.56) (xy 92.71 35.56)
 		)
 		(stroke
 			(width 0)
@@ -10806,7 +10828,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 36.83) (xy 120.65 36.83)
+			(xy 92.71 36.83) (xy 110.49 36.83)
 		)
 		(stroke
 			(width 0)
@@ -10833,6 +10855,16 @@
 			(type default)
 		)
 		(uuid "eb6db794-0e6a-4589-bf17-e33b66c9b240")
+	)
+	(wire
+		(pts
+			(xy 115.57 36.83) (xy 120.65 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb71afbe-5600-43cd-a1d3-43881527b76f")
 	)
 	(wire
 		(pts
@@ -10883,6 +10915,16 @@
 			(type default)
 		)
 		(uuid "ed4032d6-6cda-46ec-bac9-8967e8bc1e37")
+	)
+	(wire
+		(pts
+			(xy 92.71 53.34) (xy 96.52 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edafbe67-0dd2-46e3-93cf-29033d4908e7")
 	)
 	(wire
 		(pts
@@ -10946,16 +10988,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 53.34) (xy 81.28 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f54fc8fc-da07-4ba8-9444-f90eab9c24c6")
-	)
-	(wire
-		(pts
 			(xy 86.36 139.7) (xy 96.52 139.7)
 		)
 		(stroke
@@ -11016,7 +11048,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 45.72) (xy 92.71 45.72)
+			(xy 83.82 45.72) (xy 92.71 45.72)
 		)
 		(stroke
 			(width 0)
@@ -11026,7 +11058,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 27.94) (xy 110.49 53.34)
+			(xy 107.95 27.94) (xy 107.95 53.34)
 		)
 		(stroke
 			(width 0)
@@ -11827,7 +11859,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:AO3400A")
-		(at 86.36 50.8 90)
+		(at 83.82 50.8 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11836,7 +11868,7 @@
 		(dnp no)
 		(uuid "00568b09-a3f4-46fd-8d51-4ed8bf5b3e21")
 		(property "Reference" "Q4"
-			(at 86.36 56.9651 90)
+			(at 83.82 56.9651 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11844,7 +11876,7 @@
 			)
 		)
 		(property "Value" "AO3400A"
-			(at 86.36 59.3894 90)
+			(at 83.82 59.3894 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11852,7 +11884,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 88.265 55.88 0)
+			(at 85.725 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11863,7 +11895,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-			(at 90.17 55.88 0)
+			(at 87.63 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11873,7 +11905,7 @@
 			)
 		)
 		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-			(at 86.36 50.8 0)
+			(at 83.82 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12443,6 +12475,84 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 92.71 31.75 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c08e0a4-7362-403b-8107-859117367f25")
+		(property "Reference" "D7"
+			(at 88.9 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N5819WS"
+			(at 92.71 16.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 92.71 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C191023"
+			(at 88.9 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb3e703a-bb56-4a69-871d-01a01bd72df6")
+		)
+		(pin "2"
+			(uuid "57ec8cc7-af54-4d56-bbaa-7cce1703ce73")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -14835,7 +14945,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:AO3400A")
-		(at 86.36 30.48 90)
+		(at 83.82 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14844,7 +14954,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b03dae4-76d5-4b3b-ba1b-cbef86ef0c5a")
 		(property "Reference" "Q8"
-			(at 86.36 21.8905 90)
+			(at 83.82 21.8905 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14852,7 +14962,7 @@
 			)
 		)
 		(property "Value" "AO3400A"
-			(at 86.36 24.3148 90)
+			(at 83.82 24.3148 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14860,7 +14970,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 88.265 25.4 0)
+			(at 85.725 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14871,7 +14981,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-			(at 90.17 25.4 0)
+			(at 87.63 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14881,7 +14991,7 @@
 			)
 		)
 		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-			(at 86.36 30.48 0)
+			(at 83.82 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16265,6 +16375,73 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "L4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 113.03 44.45 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b9e1a31-4d37-414f-8bb3-38fed1bc4692")
+		(property "Reference" "R27"
+			(at 110.49 42.418 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "6k/0603"
+			(at 117.602 42.164 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 113.03 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9548403e-383a-43e9-9178-3151659cee13")
+		)
+		(pin "2"
+			(uuid "37bfd8dd-6a4e-4c6e-a453-959b885f9f0d")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -20696,6 +20873,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 92.71 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b293434c-7ee9-41bd-82d0-541970bc4a32")
+		(property "Reference" "D6"
+			(at 96.52 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N5819WS"
+			(at 90.17 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 92.71 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C191023"
+			(at 96.52 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c279e724-871c-4278-a99b-3fcaf5b224fb")
+		)
+		(pin "2"
+			(uuid "0633d10f-b7f6-4fcd-bfa6-400cec88fc5b")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 128.27 26.67 180)
 		(unit 1)
@@ -21310,6 +21565,73 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 113.03 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bbc01d94-1a42-4323-b439-0f512dd4a072")
+		(property "Reference" "R28"
+			(at 110.49 34.798 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "6k/0603"
+			(at 117.602 34.544 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 113.03 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69085bb1-3d37-4850-b987-ec0239ee463d")
+		)
+		(pin "2"
+			(uuid "46fcf8c9-6e54-43f6-848e-9ffd695a6f67")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -23374,7 +23696,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:AO3400A")
-		(at 99.06 30.48 270)
+		(at 101.6 30.48 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -23383,7 +23705,7 @@
 		(dnp no)
 		(uuid "df6096a0-815a-4a93-badc-187139d43d31")
 		(property "Reference" "Q1"
-			(at 99.06 21.8905 90)
+			(at 101.6 21.8905 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23391,7 +23713,7 @@
 			)
 		)
 		(property "Value" "AO3400A"
-			(at 99.06 24.3148 90)
+			(at 101.6 24.3148 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23399,7 +23721,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 97.155 25.4 0)
+			(at 99.695 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23410,7 +23732,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-			(at 95.25 25.4 0)
+			(at 97.79 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23420,7 +23742,7 @@
 			)
 		)
 		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-			(at 99.06 30.48 0)
+			(at 101.6 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25764,7 +26086,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:AO3400A")
-		(at 99.06 50.8 270)
+		(at 101.6 50.8 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25773,7 +26095,7 @@
 		(fields_autoplaced yes)
 		(uuid "fe487202-c3df-4d32-b5ff-168ca7905d45")
 		(property "Reference" "Q5"
-			(at 99.06 56.9651 90)
+			(at 101.6 56.9651 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25781,7 +26103,7 @@
 			)
 		)
 		(property "Value" "AO3400A"
-			(at 99.06 59.3894 90)
+			(at 101.6 59.3894 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25789,7 +26111,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 97.155 55.88 0)
+			(at 99.695 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25800,7 +26122,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-			(at 95.25 55.88 0)
+			(at 97.79 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25810,7 +26132,7 @@
 			)
 		)
 		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-			(at 99.06 50.8 0)
+			(at 101.6 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
