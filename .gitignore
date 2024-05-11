@@ -35,3 +35,5 @@ secrets.h
 *.lck
 
 i2current.step
+bom.png
+jlcpcb/*
