@@ -7463,6 +7463,12 @@
 		(uuid "045af22a-fb51-4de8-9e8b-304164ad4cb9")
 	)
 	(junction
+		(at 372.11 243.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "047b5b6a-8ad6-4120-bee7-e2bcc5d2ba6e")
+	)
+	(junction
 		(at 168.91 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7937,6 +7943,12 @@
 		(uuid "e5b37ef9-0e12-48bb-907c-5c2407c2dbe8")
 	)
 	(junction
+		(at 372.11 233.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e69b60c5-9665-445d-a602-6b3b14255cd2")
+	)
+	(junction
 		(at 269.24 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7965,6 +7977,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f4ac6727-86e2-4d63-9734-c2982d044d43")
+	)
+	(junction
+		(at 372.11 223.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fbdd6943-9dfb-4971-86f9-dc6d33cb4a56")
 	)
 	(junction
 		(at 119.38 24.13)
@@ -9196,6 +9214,16 @@
 			(type default)
 		)
 		(uuid "5169efea-660b-4c30-a655-ed76722db188")
+	)
+	(wire
+		(pts
+			(xy 173.99 111.76) (xy 176.53 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "518c6904-07cc-461a-8e0a-b3148a48c806")
 	)
 	(wire
 		(pts
@@ -10631,6 +10659,16 @@
 	)
 	(wire
 		(pts
+			(xy 372.11 213.36) (xy 372.11 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c32bb5e6-29c1-437e-912d-42ea0fb3b0f3")
+	)
+	(wire
+		(pts
 			(xy 106.68 27.94) (xy 107.95 27.94)
 		)
 		(stroke
@@ -10669,6 +10707,16 @@
 			(type default)
 		)
 		(uuid "c4734a73-ecee-4f63-a2eb-ca9a2732ce8a")
+	)
+	(wire
+		(pts
+			(xy 176.53 116.84) (xy 176.53 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c53d8edb-72cf-4083-83dc-3de38d8c7304")
 	)
 	(wire
 		(pts
@@ -11084,6 +11132,16 @@
 	)
 	(wire
 		(pts
+			(xy 372.11 223.52) (xy 372.11 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df11ae77-407a-4058-9299-52ad9ec6e280")
+	)
+	(wire
+		(pts
 			(xy 172.72 44.45) (xy 177.8 44.45)
 		)
 		(stroke
@@ -11404,6 +11462,16 @@
 	)
 	(wire
 		(pts
+			(xy 372.11 243.84) (xy 372.11 250.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4ff3579-8977-4749-9eee-4188df2d4c0c")
+	)
+	(wire
+		(pts
 			(xy 45.72 72.39) (xy 44.45 72.39)
 		)
 		(stroke
@@ -11545,6 +11613,16 @@
 	)
 	(wire
 		(pts
+			(xy 372.11 233.68) (xy 372.11 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe4b750b-c264-43ed-b27a-0ca4715e5e17")
+	)
+	(wire
+		(pts
 			(xy 63.5 255.27) (xy 67.31 255.27)
 		)
 		(stroke
@@ -11644,6 +11722,17 @@
 			)
 		)
 		(uuid "79fbfbb1-d254-44e1-8e94-8cdede3902a6")
+	)
+	(text "Powernets description:\n----------------------\nSinks:\n+VDC: input from DC Jack or external source (like PoE shield)\nSources:\n+BATT: output from BQ charger - battery packet voltage\n+VBUS: power from USB - careful, must not assume 5V\n+3V3: onboard step-down source for ESP32 and stuff, adjustable\n"
+		(exclude_from_sim no)
+		(at 168.656 204.724 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7dd79676-c98f-44d1-b755-37380e062100")
 	)
 	(text "VIN: 5-20V"
 		(exclude_from_sim no)
@@ -12062,7 +12151,7 @@
 		(uuid "8e565501-494e-47f0-b393-421e908fed0c")
 	)
 	(label "CC1"
-		(at 29.21 45.72 0)
+		(at 29.21 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12095,7 +12184,7 @@
 		(uuid "94701583-0cc4-4d46-94ec-a70c6eed49d7")
 	)
 	(label "USBIN_P"
-		(at 29.21 50.8 0)
+		(at 29.21 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12258,6 +12347,17 @@
 			(justify right bottom)
 		)
 		(uuid "d3808546-977b-44e1-b9b1-fdbf8e8f56e7")
+	)
+	(label "LIPO_NTC"
+		(at 173.99 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d5d31999-aae0-4f92-8ef6-016775444448")
 	)
 	(label "BQ_REGN"
 		(at 158.75 80.01 0)
@@ -15191,6 +15291,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 176.53 114.3 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31c1f1a4-6771-451d-8942-6ca388061e3d")
+		(property "Reference" "R31"
+			(at 179.07 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k/DNP"
+			(at 182.372 115.824 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 176.53 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 176.53 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebc1d245-d663-4950-8d7d-3f1c8cf6c533")
+		)
+		(pin "2"
+			(uuid "75f5fd1e-4437-43f1-81d9-e9114ad18c84")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "R31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 162.56 49.53 0)
 		(mirror y)
@@ -16681,6 +16848,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 372.11 250.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f41f33b-caa3-4fac-8f0b-1695a79b8c9b")
+		(property "Reference" "#PWR044"
+			(at 372.11 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 372.11 254.7524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 372.11 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 372.11 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 372.11 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "94d853f4-f60a-48fa-a2d9-f2ef49416ff0")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 269.24 30.48 0)
 		(unit 1)
@@ -16882,6 +17116,73 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 176.53 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "522e381e-d83a-4025-9b8f-c606dc92759c")
+		(property "Reference" "#PWR046"
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 176.53 123.9424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "19230c7e-b3fd-4956-9ff3-5c98d073328e")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -24820,7 +25121,7 @@
 			)
 		)
 		(property "Value" "BIG_OUT"
-			(at 352.552 19.05 0)
+			(at 356.108 37.084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25337,7 +25638,7 @@
 	)
 	(symbol
 		(lib_id "easyeda2kicad:SMTSO3030CTJ")
-		(at 374.65 209.55 0)
+		(at 374.65 213.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25346,7 +25647,7 @@
 		(fields_autoplaced yes)
 		(uuid "e94f367c-fc4f-4cbd-bbc7-aba77b6c96b4")
 		(property "Reference" "U3"
-			(at 380.365 208.3378 0)
+			(at 380.365 212.1478 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25355,7 +25656,7 @@
 			)
 		)
 		(property "Value" "SMTSO3030CTJ"
-			(at 380.365 210.7621 0)
+			(at 380.365 214.5721 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25364,7 +25665,7 @@
 			)
 		)
 		(property "Footprint" "easyeda2kicad:SMD_BD5.6-D4.1"
-			(at 374.65 217.17 0)
+			(at 374.65 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25373,7 +25674,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 374.65 209.55 0)
+			(at 374.65 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25382,7 +25683,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 374.65 209.55 0)
+			(at 374.65 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25391,7 +25692,7 @@
 			)
 		)
 		(property "LCSC Part" "C2915308"
-			(at 374.65 219.71 0)
+			(at 374.65 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
