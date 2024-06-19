@@ -37,3 +37,6 @@ secrets.h
 i2current.step
 bom.png
 jlcpcb/*
+.pio
+.vscode
+secrets.h
