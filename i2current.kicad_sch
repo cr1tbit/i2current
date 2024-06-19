@@ -8912,16 +8912,6 @@
 		)
 		(uuid "595a4f20-89d4-473c-82f0-179574949eb1")
 	)
-	(polyline
-		(pts
-			(xy -50.8 -8.89) (xy -33.02 -8.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "596be566-f130-4bf9-acf1-843f4274578b")
-	)
 	(wire
 		(pts
 			(xy 45.72 85.09) (xy 45.72 82.55)
@@ -11400,17 +11390,6 @@
 		)
 		(uuid "431eac0d-9d89-496b-a5b2-0b070b554499")
 	)
-	(text "OUT: 5V"
-		(exclude_from_sim no)
-		(at -29.21 -7.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4a475918-9769-4300-bea7-56a54c163342")
-	)
 	(text "C393937"
 		(exclude_from_sim no)
 		(at 53.34 204.724 0)
@@ -11463,17 +11442,6 @@
 		)
 		(uuid "7dd79676-c98f-44d1-b755-37380e062100")
 	)
-	(text "VIN: 5-20V"
-		(exclude_from_sim no)
-		(at -66.04 -7.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "840fb6b7-ca61-4e0f-9c56-374c0ab7a888")
-	)
 	(text "Rprog\n1.5MHz settings:\n1S - 3k\n2S - 6.04k\n3S - 10.5k\n4S - 17.4k"
 		(exclude_from_sim no)
 		(at 174.498 101.346 0)
@@ -11495,17 +11463,6 @@
 		)
 		(uuid "a6a5a283-c527-4615-bcf7-71984c39e794")
 	)
-	(text "ESP32: 3.3V"
-		(exclude_from_sim no)
-		(at -30.48 2.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfd21435-4754-418e-8cc8-cbadfef99e65")
-	)
 	(text "Ilim=MAX"
 		(exclude_from_sim no)
 		(at 145.034 112.522 0)
@@ -11516,6 +11473,16 @@
 			(justify left)
 		)
 		(uuid "ccba7a47-f60a-42c9-bd3f-6ef7461c5f2f")
+	)
+	(text "care, 16V mounted"
+		(exclude_from_sim no)
+		(at 70.358 45.974 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d125adc8-b4d3-4b32-828c-3b38ddec9013")
 	)
 	(text "TS (todo\nnext rev)\n-10;60C\n"
 		(exclude_from_sim no)
@@ -11528,16 +11495,15 @@
 		)
 		(uuid "dc42927a-1a50-47bc-8de0-734b801b8029")
 	)
-	(text "BAT: 3.7-4.2V"
+	(text "C352437"
 		(exclude_from_sim no)
-		(at -66.04 7.62 0)
+		(at 96.266 244.856 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
 		)
-		(uuid "dd741d7f-d2fd-4b34-b61e-125fd0444061")
+		(uuid "fbcdc7e1-8207-4c8e-a32e-64f081e20654")
 	)
 	(label "5V_ENA"
 		(at 240.03 55.88 180)
@@ -12679,7 +12645,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "3k"
 			(at 65.405 212.725 0)
 			(effects
 				(font
@@ -13342,6 +13308,76 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "C37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 99.06 133.35 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "143c5468-02a8-4974-80df-0563f1422fc6")
+		(property "Reference" "C43"
+			(at 99.822 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2u2"
+			(at 94.742 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 99.06 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a9248d3-6976-4421-9143-6eada8a20bd5")
+		)
+		(pin "2"
+			(uuid "2833d3a6-a711-4ead-bb8f-ff2f23d26cbb")
+		)
+		(instances
+			(project "i2current"
+				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -17247,77 +17283,6 @@
 			(project "i2current"
 				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
 					(reference "L4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 99.06 133.35 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "57eea71c-b35c-4b5e-92c5-24a19a39ef2b")
-		(property "Reference" "C43"
-			(at 101.3841 132.6831 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "22uF/6.3V"
-			(at 101.3841 134.5684 0)
-			(effects
-				(font
-					(size 0.6 0.6)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 99.06 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 99.06 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 99.06 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8466aaa7-dcfc-416b-9f2d-44becfaca8a8")
-		)
-		(pin "2"
-			(uuid "d3a3d5b6-57e6-4f3b-9701-8932b785c478")
-		)
-		(instances
-			(project "i2current"
-				(path "/5b28c372-d717-46a4-b70a-f55fa1c8ec9b"
-					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -23523,7 +23488,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "3k"
 			(at 103.505 89.535 0)
 			(effects
 				(font
