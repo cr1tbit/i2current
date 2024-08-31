@@ -11,16 +11,21 @@
 #include "pinDefs.h"
 #include "clueLamp.h"
 
-BQ25792 charger(0, 0);
+BQ25792 charger(-1, -1);
 MatrixPanel_I2S_DMA *dma_display = nullptr;
 
-PD_UFP_c PD_UFP;
+PD_UFP_Log_c PD_UFP;
 
-TwoWire i2c = TwoWire(0);
+// TwoWire i2c = TwoWire(0);
 SerialLogger serialLogger = SerialLogger(
     [](const char* str) {Serial.println(str);},
     LOG_DEBUG, ALOG_FANCY
 );
+
+// SerialLogger debugLogger = SerialLogger(
+//     [](const char* str) {Serial0.println(str);},
+//     LOG_DEBUG, ALOG_FANCY
+// );
 
 void drawTask(void * parameter)
 {
@@ -33,8 +38,7 @@ void drawTask(void * parameter)
     drawText(dma_display, wheelval);
     wheelval +=1;
     dma_display->flipDMABuffer();
-
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    vTaskDelay(10 / portTICK_PERIOD_MS);
   }    
 }
 
@@ -42,17 +46,20 @@ void setup() {
   Serial.begin(115200);
   Serial.setTxTimeoutMs(0); // prevent logger slowdown when no usb connected
 
+  // Serial0.begin(115200);
+
   Serial.begin(115200);
   Serial.println(alogGetInitString());
-  i2c.begin(PIN_SDA, PIN_SCL);
+  Wire.begin(PIN_SDA, PIN_SCL, 400000);
 
   AlfaLogger.addBackend(&serialLogger);
+  // AlfaLogger.addBackend(&debugLogger);
 
   AlfaLogger.begin();
   ALOGD("logger started");
-  ALOG_I2CLS(i2c);
+  ALOG_I2CLS(Wire);
 
-  PD_UFP.init(FUSB302_INT_PIN, PD_POWER_OPTION_MAX_9V);
+  PD_UFP.init(FUSB302_INT_PIN, PD_POWER_OPTION_MAX_5V);
 
   charger.reset();
   delay(500);  // give the charger time to reboot
@@ -62,9 +69,19 @@ void setup() {
 }
 
 void loop() {
-  ALOGI("Status {} Cells {} Max Voltage {} MinVoltage {} VBat {}", 
-    charger.getChargeStatus(), charger.getCellCount(), 
-    charger.getChargeVoltageLimit(), charger.getVSYSMIN(), charger.getVBAT()
-  );  
-  delay(1000);
+  // ALOGI("BQ: {} VBat {}, I {}", 
+  //   charger.getChargeStatus(), charger.getVBAT(), charger.getIBUS()
+  // );
+
+  // PD_UFP.run();
+  // PD_UFP.print_status(Serial0);
+  // if (PD_UFP.is_power_ready())
+  // {
+  //   ALOGI("PD supply connected\n");
+  // }
+  // else
+  // {
+  //   ALOGI("No PD supply available\n");
+  // }
+  // delay(10);
 }
