@@ -2,9 +2,14 @@
 
 The Raison d'être of this board is to be a powerful, extensible, and affordable replacement for hotglueing a random powerbank into your next portable small-scale electronic project.
 
-It's most useful for powering devices requiring peak power draw between 15W-60W.
+The largest benefit comes from the I2C interface - If, for example, a Raspberry Pi is powered with this board, it can actually check the battery state, if DC-jack is currently charging the device, or even see the power draw of other peripherals connected to this system.
 
-For devices requiring less power, the cost overhead becomes a bit too much - alternative solutions on aliexpress, albeit not this good, can cost less than 3$
+The board is most useful for powering devices requiring peak power draw between 15W-60W.
+
+For devices requiring less power, the cost overhead becomes a bit too much - alternative solutions on aliexpress, albeit not as much versatile, can cost less than $3 (this board costs ~$10, ordering 20 units from JLCPCB).
+
+![image](pics/i2current.png)
+
 
 ## Sub-components
 
