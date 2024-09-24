@@ -9721,7 +9721,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 161.29) (xy 121.92 161.29)
+			(xy 101.6 161.29) (xy 111.76 161.29)
 		)
 		(stroke
 			(width 0)
@@ -13485,7 +13485,7 @@
 		(uuid "e98d563e-de3d-4f12-bf41-ec2f5592094b")
 	)
 	(label "I2C_INT"
-		(at 121.92 161.29 0)
+		(at 111.76 161.29 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
