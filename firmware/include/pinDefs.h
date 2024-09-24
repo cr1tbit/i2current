@@ -27,16 +27,16 @@ HUB75_I2S_CFG getMxConfig(){
   mxconfig.gpio.r2   = 7;
   mxconfig.gpio.g2   = 42;
   mxconfig.gpio.b2   = 15;
-  mxconfig.gpio.a    = 16;
-  mxconfig.gpio.b    = 40;
-  mxconfig.gpio.c    = 17;
-  mxconfig.gpio.d    = 39;
-  mxconfig.gpio.e    = 41;
-  mxconfig.gpio.lat  = 13;
+  mxconfig.gpio.a    = 16;  //AD0
+  mxconfig.gpio.b    = 40;  //AD1
+  mxconfig.gpio.c    = 17;  //AD2
+  mxconfig.gpio.d    = 39;  //AD3
+  mxconfig.gpio.e    = 41;  //AD4
+  mxconfig.gpio.lat  = 13;  
   mxconfig.gpio.oe   = 8;
   mxconfig.gpio.clk  = 18;
 
-  mxconfig.clkphase = true;
+  mxconfig.clkphase = false;
   // mxconfig.setPixelColorDepthBits(32);
   mxconfig.double_buff = true;
   return mxconfig;

@@ -42,14 +42,14 @@
 		(stackup
 			(layer "F.SilkS"
 				(type "Top Silk Screen")
-				(color "White")
+				(color "Black")
 			)
 			(layer "F.Paste"
 				(type "Top Solder Paste")
 			)
 			(layer "F.Mask"
 				(type "Top Solder Mask")
-				(color "Black")
+				(color "White")
 				(thickness 0.01)
 			)
 			(layer "F.Cu"
@@ -70,7 +70,7 @@
 			)
 			(layer "B.Mask"
 				(type "Bottom Solder Mask")
-				(color "Black")
+				(color "White")
 				(thickness 0.01)
 			)
 			(layer "B.Paste"
@@ -78,7 +78,7 @@
 			)
 			(layer "B.SilkS"
 				(type "Bottom Silk Screen")
-				(color "White")
+				(color "Black")
 			)
 			(copper_finish "None")
 			(dielectric_constraints no)
@@ -4991,7 +4991,7 @@
 		(path "/d4023f2e-581b-409c-9f06-a01b62d4a235")
 		(sheetname "Root")
 		(sheetfile "i2current.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11.83 4.77)
 			(end 11.83 -3.13)
@@ -5547,6 +5547,7 @@
 			(uuid "c974044f-5712-4b38-b816-60ca3f8bba10")
 		)
 		(model "${EASYEDA2KICAD}/easyeda2kicad.3dshapes/CONN-TH_6P-P3.81_JILN_JL15EDGA-38106G01.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 -4.12 0)
 			)
@@ -10459,7 +10460,7 @@
 		(path "/31c1f1a4-6771-451d-8942-6ca388061e3d")
 		(sheetname "Root")
 		(sheetfile "i2current.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -14145,7 +14146,7 @@
 		(path "/a495fcfe-490e-4103-9dd3-6fd6505effa8")
 		(sheetname "Root")
 		(sheetfile "i2current.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.11 -0.76)
 			(end 0 -0.76)
@@ -14383,6 +14384,7 @@
 			(uuid "1f9cfb76-d1bc-4fff-b889-2729d1addcad")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_1.27mm.3dshapes/PinHeader_1x05_P1.27mm_Vertical.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25646,7 +25648,7 @@
 		(path "/d69c99dd-6d95-4385-bcd7-387be419cc8c")
 		(sheetname "Root")
 		(sheetfile "i2current.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.153641 0.38)
 			(end 0.153641 0.38)
@@ -28002,7 +28004,7 @@
 		(path "/84550630-af99-4b08-9f4d-fc535b9d5891")
 		(sheetname "Root")
 		(sheetfile "i2current.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -9 -7)
 			(end 9 -7)

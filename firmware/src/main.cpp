@@ -64,16 +64,21 @@ void setup() {
   charger.reset();
   delay(500);  // give the charger time to reboot
 
+  charger.setChargeCurrentLimit(0.5);
+
   xTaskCreatePinnedToCore( drawTask, "drawTask",
       4096, NULL, 31, NULL , 1);
 }
 
 void loop() {
-  // ALOGI("BQ: {} VBat {}, I {}", 
-  //   charger.getChargeStatus(), charger.getVBAT(), charger.getIBUS()
-  // );
-
   // PD_UFP.run();
+  // delay(10);
+
+  //run every 3 sec
+  static uint32_t lastRun = 0;
+  if (millis() - lastRun < 3000) return;
+  lastRun = millis();
+  
   // PD_UFP.print_status(Serial0);
   // if (PD_UFP.is_power_ready())
   // {
@@ -83,5 +88,11 @@ void loop() {
   // {
   //   ALOGI("No PD supply available\n");
   // }
-  // delay(10);
+
+  ALOGI("BQ: {} VBat {}, I {}", 
+    charger.getChargeStatus(), charger.getVBAT(), charger.getIBUS()
+  );
+
+  delay(10);
+
 }
