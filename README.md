@@ -94,9 +94,10 @@ this board has many more fun quirks - I'll describe more details at a later date
 * USB passthrough
 * GLOB_OFF usage
 * Pinout description for every connector
+* 1S-4S config and limitations
 
 ## Sponsors
 
-Developent of this board is supported by [Clue.lamp](https://www.instagram.com/clue.lamp/). 
+Developent of this board is supported by [Clue.lamp](https://www.instagram.com/clue.lamp/).
 
 Check them out, the device looks really nice, and utilizes state-of-the-art electronic design for both wired and wireless usage :)
