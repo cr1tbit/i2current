@@ -9,6 +9,13 @@
 
 #define FUSB302_INT_PIN   5
 
+const int sd_clk = 21;
+const int sd_cmd = 14;
+const int sd_d0  = 47;
+const int sd_d1  = 48;
+const int sd_d2  = 11;
+const int sd_d3  = 12;
+
 
 #define PANEL_RES_X 64      // Number of pixels wide of each INDIVIDUAL panel module. 
 #define PANEL_RES_Y 32     // Number of pixels tall of each INDIVIDUAL panel module.

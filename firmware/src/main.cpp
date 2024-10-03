@@ -11,6 +11,9 @@
 #include "pinDefs.h"
 #include "clueLamp.h"
 
+#include "FS.h"
+#include "SD_MMC.h"
+
 BQ25792 charger(-1, -1);
 MatrixPanel_I2S_DMA *dma_display = nullptr;
 
@@ -42,6 +45,42 @@ void drawTask(void * parameter)
   }    
 }
 
+void init_SD(){
+  if(!SD_MMC.setPins(sd_clk, sd_cmd, sd_d0, sd_d1, sd_d2, sd_d3)){
+    Serial.println("Pin change failed!");
+    return;
+  }
+
+  if (!SD_MMC.begin()) {
+    Serial.println("Card failed, or not present");
+    return;
+  }
+  uint8_t cardType = SD_MMC.cardType();
+  if(cardType == CARD_NONE){
+      Serial.println("No SD_MMC card attached");
+      return;
+  }
+
+  Serial.print("SD_MMC Card Type: ");
+  if(cardType == CARD_MMC){
+      Serial.println("MMC");
+  } else if(cardType == CARD_SD){
+      Serial.println("SDSC");
+  } else if(cardType == CARD_SDHC){
+      Serial.println("SDHC");
+  } else {
+      Serial.println("UNKNOWN");
+  }
+
+  uint64_t cardSize = SD_MMC.cardSize() / (1024 * 1024);
+  Serial.printf("SD_MMC Card Size: %lluMB\n\r", cardSize);
+
+  Serial.printf("Using: %llu/%lluMB\n\r",
+    SD_MMC.usedBytes() / (1024 * 1024),
+    SD_MMC.totalBytes() / (1024 * 1024)
+  );
+}
+
 void setup() {
   Serial.begin(115200);
   Serial.setTxTimeoutMs(0); // prevent logger slowdown when no usb connected
@@ -58,6 +97,10 @@ void setup() {
   AlfaLogger.begin();
   ALOGD("logger started");
   ALOG_I2CLS(Wire);
+
+  init_SD();
+
+  Serial.println("card initialized.");
 
   PD_UFP.init(FUSB302_INT_PIN, PD_POWER_OPTION_MAX_5V);
 
