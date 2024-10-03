@@ -12552,6 +12552,16 @@
 		)
 		(uuid "88ae03d8-92bc-4a9b-b6cc-b621df387471")
 	)
+	(text "TODO ADD RES HERE!!!"
+		(exclude_from_sim no)
+		(at 117.348 258.826 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "954b0820-e092-4d1b-b6ee-2af8113eefff")
+	)
 	(text "@5:78eur, 67.2pln/szt\n@10:108eur, 46.5pln/szt\n@20:€171.37, 37pln/szt"
 		(exclude_from_sim no)
 		(at 394.97 18.796 0)
