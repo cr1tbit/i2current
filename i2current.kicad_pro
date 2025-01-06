@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.15
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -58,15 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "courtyards_overlap|51261897|75580001|019caa03-b407-40b0-b56d-519e3e26ddcc|6aad74f7-b70f-4a07-a55a-688255667602",
-        "courtyards_overlap|61980001|75550001|500af3b9-323b-49ff-b2c9-14a99f964dc2|5eb82a36-98b8-412e-b3c9-04c585381f95",
-        "courtyards_overlap|76819999|61670001|04f45f23-4a30-40fe-b430-269e35981654|6880fb35-34bb-4ab8-ab81-8e529c2b71db",
-        "courtyards_overlap|83700001|103150001|6c2c1ba3-59e1-43cd-8ccc-c5a205182e6b|edcb523e-e985-45c4-8965-2b75b67c56d9",
-        "courtyards_overlap|83800001|106320001|edcb523e-e985-45c4-8965-2b75b67c56d9|fee40070-fb1d-403f-974a-c11e7fd13f05",
-        "lib_footprint_mismatch|59500000|97250000|3eebe46e-3986-4650-a3c0-395537d85909|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|95170000|64777500|b53d8e26-f710-47c8-847f-221352a40fef|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -499,7 +491,7 @@
       "pos_files": "",
       "specctra_dsn": "",
       "step": "i2current.step",
-      "svg": "",
+      "svg": "boxes",
       "vrml": ""
     },
     "page_layout_descr_file": ""
