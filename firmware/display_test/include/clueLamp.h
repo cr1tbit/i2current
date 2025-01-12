@@ -2,13 +2,8 @@
 #include <ESP32-HUB75-MatrixPanel-I2S-DMA.h>
 #include <Arduino.h>
 
-  /* power draw test */
-  // dma_display->fillScreen(myORANG); 
-  // dma_display->flipDMABuffer();
-  // while(1){
-  //   delay(5000);
-  // }
-
+extern volatile uint8_t glo_brightness;
+extern volatile int glo_voltage, glo_power, glo_set;
 
 uint16_t colorWheel(MatrixPanel_I2S_DMA* dma_display, uint8_t pos) {
   if(pos < 85) {
@@ -28,6 +23,31 @@ uint16_t myRED   = MatrixPanel_I2S_DMA::color565(255, 0, 0);
 uint16_t myGREEN = MatrixPanel_I2S_DMA::color565(0, 255, 0);
 uint16_t myBLUE  = MatrixPanel_I2S_DMA::color565(0, 0, 255);
 uint16_t myORANG = MatrixPanel_I2S_DMA::color565(255, 64, 0);
+
+void powerTest(MatrixPanel_I2S_DMA* dma_display){
+    dma_display->setTextSize(1);
+    dma_display->setTextWrap(false);
+  while(1){
+    if (glo_brightness < 255) {
+      glo_brightness ++;
+    }
+    dma_display->setBrightness8(glo_brightness);
+    dma_display->fillScreen(myWHITE);
+    dma_display->setTextColor(myBLACK);
+    dma_display->setCursor(2, 2);
+    dma_display->println("Voltage: ");
+    dma_display->println(glo_voltage);
+    dma_display->setCursor(2, 20);
+    dma_display->println("Current: ");
+    dma_display->println(glo_power);
+    dma_display->setCursor(2, 38);
+    dma_display->println("Set: ");
+    dma_display->println(glo_set);
+    dma_display->flipDMABuffer();
+
+    delay(100);
+  }
+}
 
 void drawText(MatrixPanel_I2S_DMA* dma_display, int colorWheelOffset)
 {

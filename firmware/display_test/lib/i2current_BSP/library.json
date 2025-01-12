@@ -1,0 +1,17 @@
+{
+    "name": "i2current_BSP",
+    "version": "0.0.1",
+    "description": "wrapper around i2c peripherals on i2current board",
+    "keywords": "",
+    "license": "MIT",
+    "dependencies": {
+        "Wire": "^1.0.1",
+        "kcl93/FUSB302 PD UFP sink": "^0.1",
+        "BQ25792_Driver": "file:///home/critbit/Projects/software/platformio-custom-libs/BQ25792_Driver"
+      },
+    "frameworks": "arduino",
+    "repository": {
+        "type": "git",
+        "url": "https://example.com"
+    }
+}
