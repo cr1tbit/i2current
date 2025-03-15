@@ -28,9 +28,9 @@ void powerTest(MatrixPanel_I2S_DMA* dma_display){
     dma_display->setTextSize(1);
     dma_display->setTextWrap(false);
   while(1){
-    if (glo_brightness < 255) {
-      glo_brightness ++;
-    }
+    // if (glo_brightness < 255) {
+    //   glo_brightness ++;
+    // }
     dma_display->setBrightness8(glo_brightness);
     dma_display->fillScreen(myWHITE);
     dma_display->setTextColor(myBLACK);

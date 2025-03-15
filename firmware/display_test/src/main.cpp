@@ -112,7 +112,7 @@ void setup() {
 
   // init_SD();
 
-  Serial.println("card initialized.");
+  // Serial.println("card initialized.");
 
   xTaskCreatePinnedToCore( drawTask, "drawTask",
       4096, NULL, 31, NULL , 1);
@@ -132,6 +132,17 @@ void loop() {
       //reset esp32
       ESP.restart();
     }
+    if (c == 's'){
+      Serial.printf("0x%02x\n\r", 
+        i2currentBoard.charger.readByte(REG14_Charger_Control_5));
+      // i2currentBoard.charger.setInputCurrentLimit(0.2);
+      // Serial.println("saving settings");
+      // saveSettings();
+    }
+    if (c == 'l'){
+      i2currentBoard.charger.writeByte(REG14_Charger_Control_5, 0x36);
+      // loadSettings();
+    }
   }
 
   vTaskDelay(10 / portTICK_PERIOD_MS);
@@ -141,13 +152,7 @@ void loop() {
   if (millis() - lastRun < 3000) return;
   lastRun = millis();
   
-  Serial.print(i2currentBoard.getInputStats());
-
-
-  // ALOGI("BQ: {} VBat {}, I {}", 
-  //   charger.getChargeStatus(), charger.getVBAT(), charger.getIBUS()
-  // );
-
-  // delay(10);
-
+  Serial.println(i2currentBoard.getInputStats());
+  Serial.println(i2currentBoard.getBattStats());
+  Serial.println("----");
 }

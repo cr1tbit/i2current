@@ -40,3 +40,6 @@ jlcpcb/*
 .pio
 .vscode
 secrets.h
+
+
+*.wrl
