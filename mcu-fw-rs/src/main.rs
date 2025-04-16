@@ -1,27 +1,33 @@
 #![no_std]
 #![no_main]
+#![feature(type_alias_impl_trait)]
 #![feature(impl_trait_in_assoc_type)]
-#![feature(generic_const_exprs)]
 
-use cortex_m::peripheral::SCB;
-use cortex_m_rt::{exception, ExceptionFrame};
-use embassy_time::{Ticker, Duration, Instant};
+use defmt::*;
 use embassy_executor::Spawner;
 
-use py32_hal::gpio::Level;
-use py32_hal::rcc::{Pll, PllSource, Sysclk};
-use py32_hal::time::Hertz;
-use defmt::*;
-use {defmt_rtt as _, panic_halt as _};
+#[allow(unused)]
+use embassy_time::{Duration, Timer, Ticker, Instant};
 
-mod bat;
-mod pins;
-mod interrupts;
+#[allow(unused)]
+use py32_hal::{
+    adc::{Adc, SampleTime},
+    gpio::{Level, Pull, Speed},
+    peripherals::{ADC, I2C1, USART1, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA12, PA13, PA14, PB0, PB1},
+    rcc::{Pll, PllSource, Sysclk},
+    time::Hertz,
+};
+use {defmt_rtt as _, panic_probe as _};
 
-use pins::Board;
+// use cortex_m::peripheral::SCB;
+use cortex_m_rt::{exception, ExceptionFrame};
+
+mod bsp;
+use bsp::pins::Board;
+// use bsp::interrupts::Irqs;
 
 #[embassy_executor::main]
-async fn main(_spawner: Spawner) {
+async fn main(spawner: Spawner) {
     info!("Hello World!");
 
     let mut cfg: py32_hal::Config = Default::default();
@@ -32,40 +38,32 @@ async fn main(_spawner: Spawner) {
     cfg.rcc.sys = Sysclk::PLL;
     let p = py32_hal::init(cfg);
 
-    // Initialize the board
+    // Initialize board
     let mut board = Board::init(p);
 
-    board.pins.pa12.set_as_output(py32_hal::gpio::Speed::VeryHigh);
-    board.pins.pa12.set_low();
+    // Initialize battery monitor
+    // let bat_monitor = bsp::bat::BatteryMonitor::new(board.adc, board.pins.pa0);
 
-    _spawner.spawn(bat::run_bat_monitor(board.adc)).unwrap();
-   
-    let mut cnt:u16 = 0;
-    let mut ticker = Ticker::every(Duration::from_millis(100));
+    // // Spawn battery monitor task
+    // spawner.spawn(bsp::bat::run_bat_monitor(bat_monitor)).unwrap();
 
+    board.i2c.scan();
+
+    // Main loop
+    let mut ticker = Ticker::every(Duration::from_secs(1));
     loop {
-        let time_start: Instant = Instant::now();
-        
-        if board.pins.pa12.is_high() {
-            board.pins.pa12.set_low();
-            info!("low")
-        } else {
-            board.pins.pa12.set_high();
-            info!("high")
-        }
-
-        // cnt += 1;
-        // if cnt % 10 == 0 {
-            let duration: Duration = Instant::now() - time_start;
-            info!("tick {}, render time {}us", cnt, duration.as_micros());
-        // }
-        ticker.next().await;        
+        ticker.next().await;
+        info!("Tick");
     }
 }
 
-//conserve flash space with the non-handler
 #[exception]
-unsafe fn HardFault(_frame: &ExceptionFrame) -> ! {
-    SCB::sys_reset()
+unsafe fn HardFault(_ef: &ExceptionFrame) -> ! {
+    defmt::panic!("HardFault");
+}
+
+#[exception]
+unsafe fn DefaultHandler(irq: i16) {
+    defmt::panic!("Unhandled exception (IRQ {})", irq);
 }
 

@@ -1,4 +1,3 @@
-
 // Please note, this code has been EXTREMELY vibecoded, and looks like shit.
 // I only tested GPIO for now. Putting it on the repo for reference.
 
@@ -7,17 +6,18 @@ use embassy_time::Timer;
 use py32_hal::{
     adc::{Adc, SampleTime},
     gpio::{Flex, Level, Pull, Speed},
-    peripherals::{ADC, I2C1, USART1, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA12, PA13, PA14, PB0, PB1},
+    peripherals::{ADC, I2C1, PA0, PA1, PA12, PA13, PA14, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PB0, PB1, USART1}, Peripheral,
 };
 
-use crate::interrupts::Irqs;
+use crate::bsp::{interrupts::Irqs, i2c::{I2cPeripheral, I2cSdaPin, I2cSclPin}};
 
 /// Board Support Package for the PY32 MCU
+#[allow(unused)]
 pub struct Board<'a> {
     /// ADC peripheral
     pub adc: Adc<'a, ADC>,
     /// I2C peripheral
-    pub i2c: I2C1,
+    pub i2c: I2cPeripheral<'a>,
     /// UART peripheral
     pub uart: USART1,
     /// SWD pins
@@ -27,6 +27,7 @@ pub struct Board<'a> {
 }
 
 /// SWD debug pins
+#[allow(unused)]
 pub struct SwdPins {
     /// SWDIO pin
     pub swdio: Flex<'static>,
@@ -35,15 +36,14 @@ pub struct SwdPins {
 }
 
 /// Available GPIO pins
+#[allow(unused)]
 pub struct Pins {
     /// PA0 - ADC input
     pub pa0: Flex<'static>,
     /// PA1 - I2C internal
     pub pa1: Flex<'static>,
     /// PA2 - I2C SDA
-    pub pa2: Flex<'static>,
     /// PA3 - I2C SCL
-    pub pa3: Flex<'static>,
     /// PA4 - Battery charger chip select
     pub pa4: Flex<'static>,
     /// PA5 - OLED reset
@@ -75,8 +75,6 @@ impl<'a> Board<'a> {
         let pins = Pins {
             pa0: Flex::new(p.PA0),
             pa1: Flex::new(p.PA1),
-            pa2: Flex::new(p.PA2),
-            pa3: Flex::new(p.PA3),
             pa4: Flex::new(p.PA4),
             pa5: Flex::new(p.PA5),
             pa6: Flex::new(p.PA6),
@@ -86,28 +84,33 @@ impl<'a> Board<'a> {
             pb0: Flex::new(p.PB0),
             pb1: Flex::new(p.PB1),
         };
+        unsafe {
+            // Initialize ADC
+            let mut adc = Adc::new(p.ADC, Irqs);
+            adc.set_sample_time(SampleTime::CYCLES71_5);
 
-        // Initialize ADC
-        let mut adc = Adc::new(p.ADC, Irqs);
-        adc.set_sample_time(SampleTime::CYCLES71_5);
+            // Initialize I2C
+            let i2c = I2cPeripheral::new(
+                p.I2C1,  
+                p.PA2.clone_unchecked(), 
+                p.PA3.clone_unchecked());
 
-        // Initialize I2C
-        let i2c = p.I2C1;
+            // Initialize UART
+            let uart = p.USART1;
 
-        // Initialize UART
-        let uart = p.USART1;
-
-        Self {
-            adc,
-            i2c,
-            uart,
-            swd,
-            pins,
+            Self {
+                adc,
+                i2c,
+                uart,
+                swd,
+                pins,
+            }
         }
     }
 }
 
 /// Helper functions for configuring pins
+#[allow(unused)]
 impl Pins {
     /// Configure a pin as output
     pub fn configure_output(&mut self, pin: &mut Flex<'static>, level: Level) {
@@ -123,3 +126,6 @@ impl Pins {
         pin.set_as_input(pull);
     }
 }
+
+impl I2cSdaPin for Flex<'static> {}
+impl I2cSclPin for Flex<'static> {}
