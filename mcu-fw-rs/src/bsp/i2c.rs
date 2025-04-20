@@ -1,9 +1,5 @@
 use py32_hal::{
-    i2c::{Config, I2c, SclPin, SdaPin},
-    mode::Async,
-    peripherals::I2C1,
-    time::Hertz,
-    gpio::Flex,
+    gpio::{AnyPin, Pin}, i2c::{Config, I2c, SclPin, SdaPin}, mode::Async, peripherals::I2C1, time::Hertz
 };
 
 use defmt::*;
@@ -31,15 +27,17 @@ impl Default for I2cConfig {
 pub struct I2cPeripheral<'a> {
     /// I2C peripheral instance
     pub i2c: I2c<'a, Async>,
+    pub pin_isr: AnyPin
 }
 
 impl<'a> I2cPeripheral<'a> {
     /// Initialize I2C peripheral with default configuration
     pub fn new(i2c: I2C1,
             sda: impl SdaPin<I2C1>,
-            scl: impl SclPin<I2C1>
+            scl: impl SclPin<I2C1>,
+            isr: impl Pin
         ) -> Self {
-        Self::with_config(i2c, sda, scl, I2cConfig::default())
+        Self::with_config(i2c, sda, scl, isr, I2cConfig::default())
     }
 
     //  Initialize I2C peripheral with custom configuration
@@ -47,13 +45,14 @@ impl<'a> I2cPeripheral<'a> {
         i2c: I2C1,
         sda: impl SdaPin<I2C1>,
         scl: impl SclPin<I2C1>,
+        isr: impl Pin,
         config: I2cConfig,
     ) -> Self {
         let i2c = I2c::new(
             i2c, scl, sda,
             Irqs, config.speed, config.config
         );
-        Self { i2c }
+        Self { i2c, pin_isr: isr.into() }
     }
 
     pub fn scan(&mut self) {
@@ -71,8 +70,3 @@ impl<'a> I2cPeripheral<'a> {
         }
     }
 }
-
-/// Marker trait for I2C SDA pins
-pub trait I2cSdaPin {}
-/// Marker trait for I2C SCL pins
-pub trait I2cSclPin {} 

@@ -15,7 +15,7 @@ pub struct BatteryMonitor {
 }
 
 impl BatteryMonitor {
-    pub fn new(adc: Adc<'static, ADC>, pin: Flex<'static>) -> Self {
+    pub fn _new(adc: Adc<'static, ADC>, pin: Flex<'static>) -> Self {
         Self { adc, pin }
     }
 }

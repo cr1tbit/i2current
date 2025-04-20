@@ -14,8 +14,6 @@ use py32_hal::{
     adc::{Adc, SampleTime},
     gpio::{Level, Pull, Speed},
     peripherals::{ADC, I2C1, USART1, PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA12, PA13, PA14, PB0, PB1},
-    rcc::{Pll, PllSource, Sysclk},
-    time::Hertz,
 };
 use {defmt_rtt as _, panic_probe as _};
 
@@ -27,19 +25,10 @@ use bsp::pins::Board;
 // use bsp::interrupts::Irqs;
 
 #[embassy_executor::main]
-async fn main(spawner: Spawner) {
+async fn main(_spawner: Spawner) {
     info!("Hello World!");
-
-    let mut cfg: py32_hal::Config = Default::default();
-    cfg.rcc.hsi = Some(Hertz::mhz(24));
-    cfg.rcc.pll = Some(Pll {
-        src: PllSource::HSI,
-    });
-    cfg.rcc.sys = Sysclk::PLL;
-    let p = py32_hal::init(cfg);
-
     // Initialize board
-    let mut board = Board::init(p);
+    let mut board = Board::init();
 
     // Initialize battery monitor
     // let bat_monitor = bsp::bat::BatteryMonitor::new(board.adc, board.pins.pa0);
@@ -63,7 +52,7 @@ unsafe fn HardFault(_ef: &ExceptionFrame) -> ! {
 }
 
 #[exception]
-unsafe fn DefaultHandler(irq: i16) {
-    defmt::panic!("Unhandled exception (IRQ {})", irq);
+unsafe fn DefaultHandler(_irq: i16) {
+    defmt::panic!("Unhandled exception ");
 }
 
