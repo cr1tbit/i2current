@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.2,
-          "width": 1.4
+          "height": 5.4,
+          "width": 2.6
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -68,8 +68,6 @@
         "courtyards_overlap|61525000|76675000|5eb82a36-98b8-412e-b3c9-04c585381f95|a0fd48c5-dbfd-405e-a5f4-f4db14cbfbd8",
         "courtyards_overlap|61525000|78225000|0f303fc7-0687-41bb-83c2-d896cee9cc59|f0e72eea-3850-4009-9cea-e66a4f5872cf",
         "courtyards_overlap|66645000|68595000|20e1e902-5c29-4649-9e6f-05ef3b3d9650|c8e2c727-3402-4b03-9b8d-511726f49c9d",
-        "courtyards_overlap|71175000|72872074|a9721b9d-15bf-4763-a4a9-411523ed3a31|eb70fc3d-1b5b-4f63-bdc3-0b8401e19577",
-        "courtyards_overlap|71175000|75675000|a9721b9d-15bf-4763-a4a9-411523ed3a31|0c4a830c-cf84-4d6a-b1c4-309fcdaf8801",
         "courtyards_overlap|90443391|56425000|5026c792-d436-406c-a398-1698366a1736|b53d8e26-f710-47c8-847f-221352a40fef"
       ],
       "meta": {
@@ -505,7 +503,7 @@
       "specctra_dsn": "",
       "step": "i2current.step",
       "svg": "boxes",
-      "vrml": ""
+      "vrml": "i2current.wrl"
     },
     "page_layout_descr_file": ""
   },
