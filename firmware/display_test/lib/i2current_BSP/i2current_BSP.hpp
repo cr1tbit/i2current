@@ -83,6 +83,7 @@ public:
 
         charger.setChargeCurrentLimit(1.0);
         charger.setInputCurrentLimit(1.0);
+        // charger.writeByte(REG18_NTC_Control_1, 0x01); //disable thermistor monitoring
         //default 0x16, set 0x36 to enable discharge current monitoring
         //doesnt work yet, TODO
         charger.writeByte(REG14_Charger_Control_5, 0x36); 

@@ -134,13 +134,14 @@ void loop() {
     }
     if (c == 's'){
       Serial.printf("0x%02x\n\r", 
-        i2currentBoard.charger.readByte(REG14_Charger_Control_5));
+        i2currentBoard.charger.readByte(REG18_NTC_Control_1));
       // i2currentBoard.charger.setInputCurrentLimit(0.2);
       // Serial.println("saving settings");
       // saveSettings();
     }
     if (c == 'l'){
-      i2currentBoard.charger.writeByte(REG14_Charger_Control_5, 0x36);
+      // i2currentBoard.charger.writeByte(REG14_Charger_Control_5, 0x36);
+      i2currentBoard.pdController.print_status(Serial);
       // loadSettings();
     }
   }
