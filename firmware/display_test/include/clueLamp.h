@@ -18,7 +18,7 @@ uint16_t colorWheel(MatrixPanel_I2S_DMA* dma_display, uint8_t pos) {
 }
 
 uint16_t myBLACK = MatrixPanel_I2S_DMA::color565(0, 0, 0);
-uint16_t myWHITE = MatrixPanel_I2S_DMA::color565(255, 255, 255);
+uint16_t myWHITE = MatrixPanel_I2S_DMA::color565(255, 0, 255);
 uint16_t myRED   = MatrixPanel_I2S_DMA::color565(255, 0, 0);
 uint16_t myGREEN = MatrixPanel_I2S_DMA::color565(0, 255, 0);
 uint16_t myBLUE  = MatrixPanel_I2S_DMA::color565(0, 0, 255);

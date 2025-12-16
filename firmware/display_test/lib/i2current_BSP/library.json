@@ -7,7 +7,7 @@
     "dependencies": {
         "Wire": "^1.0.1",
         "kcl93/FUSB302 PD UFP sink": "^0.1",
-        "BQ25792_Driver": "file:///home/critbit/Projects/software/platformio-custom-libs/BQ25792_Driver"
+        "BQ25792_Driver": "https://github.com/cr1tbit/BQ25792_Driver#3cf89f37d8e93febf68a4e2f3de35796c1d0462e"
       },
     "frameworks": "arduino",
     "repository": {
